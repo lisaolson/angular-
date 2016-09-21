@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html ng-app="artApp">
+<html ng-app="musicApp">
   <head>
     <meta charset="utf-8">
     <title>title</title>
     <script type="text/javascript" src="../scripts/app.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../scripts/directives/musicDirective.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/musicController.js"></script>
 
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <body>
-
+    <div class="container" ng-controller="musicController as musicCtrl">
+          <h1> Hello World! </h1>
+          <div class="row">
+            <div ng-repeat="" class="col-md-3">
+              <music artist="{{artistName}}"></music>
+          </div>
+    </div>
   </body>
 </html>
