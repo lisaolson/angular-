@@ -1,4 +1,6 @@
-<h1>{{input}}</h1>
-<p>
-  <h2>{{musicCtrl.music}}</h2>
+
+
+<h1>Music!</h1>
+<div ng-repeat = "music in musicIndexCtrl.allMusic">
+  <h5><a ng-href="/music/{{music._id}}"><{{music.title}}</a></h5>
 </p>

@@ -1,12 +1,12 @@
 angular
   .module('musicApp')
-  .directive('music', music);
+  .directive('currentAlbums', currentAlbums);
 
-  function music(){
+  function currentAlbums(){
     var directive = {
       restrict: 'E',
       scope: {
-        input: '@'
+        album: '@'
       },
       replace: true,
       templateUrl: '/templates/music.html',
@@ -17,20 +17,20 @@ angular
     musicController.$inject = ['$http', '$scope'];
     function musicController($http, $scope){
       var vm = this;
-      var url = "";
-      vm.getMusic = function(input){
-        console.log(url + input );
+      var url = "https://api.soundcloud.com/tracks/?client_id=9a5b10b365e2b82fef5ece0ce57d6e03";
+      vm.getMusic = function(album){
+        console.log(url + album );
         $http({
           method: 'GET',
-          url: url + city
+          url: url + album
         }).then(function(response){
           console.log(response);
-          vm.weather = response.data;
+          vm.music = response.data;
         }, function(err){
           console.log(err);
         });
       };
-    vm.getMusic($scope.city);
+    vm.getMusic($scope.album);
 };
 return directive;
 }
