@@ -1,0 +1,40 @@
+h1 {
+  font-size: 250%;
+}
+header {
+  margin: 50px;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  border-bottom: 10px dashed black;
+
+}
+
+#vid1 {
+  position: absolute;
+  margin: 200px 150px 0px 50px;
+}
+
+#vid2 {
+  position: absolute;
+  margin: 200px 150px 0px 450px;
+}
+
+#vid3 {
+  position: absolute;
+  margin: 200px 150px 0px 850px;
+}
+
+#vid4 {
+  position: absolute;
+  margin: 600px 150px 0px 50px;
+}
+
+#vid5 {
+  position: absolute;
+  margin: 600px 150px 0px 450px;
+}
+
+#vid6 {
+  position: absolute;
+  margin: 600px 150px 0px 850px;
+}
