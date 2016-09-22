@@ -1,21 +1,22 @@
 
-angular.module('musicApp')
-  .controller('MusicIndexController', MusicIndexController);
-
-MusicIndexController.$inject=['MusicService'];
-  function MusicIndexController( MusicService ){
-    var vm = this;
-    vm.albums = [];
-
-    getMusic();
-
-    function getMusic() {
-      MusicService.query(function(data){
-        console.log('here is the music data in the controller ', data);
-        vm.music = data;
-      });
-    }
-  }
+// 
+// angular.module('musicApp')
+//   .controller('MusicIndexController', MusicIndexController);
+//
+// MusicIndexController.$inject=['MusicService'];
+//   function MusicIndexController( MusicService ){
+//     var vm = this;
+//     vm.albums = [];
+//
+//     getMusic();
+//
+//     function getMusic() {
+//       MusicService.query(function(data){
+//         console.log('here is the music data in the controller ', data);
+//         vm.music = data;
+//       });
+//     }
+//   }
 
   // musicController.$inject = ['$http'];
   //

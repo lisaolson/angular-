@@ -3,22 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>musicforlife</title>
+
+    <script src="./node_modules/angular-resource/angular-resource.js"></script>
     <script src="../bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="../scripts/app.js"></script>
     <script type="text/javascript" src="../scripts/directives/musicDirective.js"></script>
-    <script type="text/javascript" src="../scripts/controllers/musicController.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/musicIndexController.js"></script>
     <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+
 
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   </head>
   <body>
+
     <div class="container">
       <div class="row">
-        <div ng-view></div>
+        <div class="col-md-6 col-md-offset-3">
+          <div ng-view></div>
+        </div>
       </div>
     </div>
+
   </body>
 </html>
