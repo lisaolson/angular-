@@ -1,7 +1,47 @@
-console.log('app.js is linked!');
+// 
+// var musicApp = angular.module('musicApp', []);
+//
+// musicApp.config(['$routeProvider',
+//   function($routeProvider) {
+//     $routeProvider.
+//       when('/About', {
+// 	templateUrl: '../partials/about.html',
+// 	controller: 'AboutController'
+//       }).
+//       when('/Contact', {
+// 	templateUrl: '../partials/contact.html',
+// 	controller: 'ContactController'
+//       }).
+//       otherwise({
+// 	redirectTo: '/'
+//       });
+// }]);
+//
+//
+// musicApp.controller('AboutController', function($scope) {
+//
+// 	$scope.message = 'This is the About screen';
+//
+// });
+//
+//
+// musicApp.controller('ContactController', function($scope) {
+//
+// 	$scope.message = 'This is the Contact screen';
+//
+// });
 
-angular
-  .module('musicApp', [])
+
+// console.log('app.js is linked!');
+//
+// var app = angular.module('musicApp', []);
+//
+
+//
+//   app.controller('PageCtrl', function($http) {
+//     console.log('Page controller');
+//
+//   })
 
 // angular.module('musicApp', [])
 //   .controller('musicController', musicController);

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html ng-app="musicApp">
+<html ng-app="">
   <head>
     <meta charset="utf-8">
     <title>music</title>
@@ -9,24 +9,55 @@
     <script type="text/javascript" src="../scripts/app.js"></script>
     <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
 
-    <link rel="stylesheet" href="../styles/styles.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 
   </head>
 
   <body>
-    <header>
-     <h1>M U S I C</h1>
-    </header>
+<div class="page-wrap">
+    <!-- <div ng-include="../templates/header.html"></div> -->
+    <!-- <div ng-view></div> -->
 
+    <header>
+      <div class="container">
+        <!-- <div class="row">
+        <div class="col-md-3">
+          <ul class="nav">
+            <li><a href="#About">About</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div> -->
+     <h1>M U S I C</h1>
+
+    </header>
+    <div id="input">
+    <input id="inputname" type="text" placeholder="Type your name" ng-model="name" />
+    <h2>Welcome to the music app {{ name }} !</h2>
+    <div id="line"></div>
+    </div>
+
+</div>
+</div>
+      <div id="videos">
         <iframe id="vid1" width="30%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/145894563&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         <iframe id="vid2" width="30%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/224687194&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         <iframe id="vid3" width="30%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/249533946&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         <iframe id="vid4" width="30%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/250711755&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         <iframe id="vid5" width="30%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/124010414&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         <iframe id="vid6" width="30%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/200641259&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-
+      </div>
+      <!-- <div id="contact" ng-controller="ContactController">
+        Email:<input type="text" ng-model="newcontact"/>
+        <button ng-click="add()">Add</button>
+        <h2>Contacts</h2>
+        <ul>
+          <li ng-repeat="contact in contacts"> {{contact}} </li>
+        </ul>
+      </div> -->
 
 
     <!-- <div class="container" ng-controller="musicController as musicCtrl">
@@ -42,5 +73,6 @@
        </div>
        </div>
      </div> -->
+   </div>
   </body>
 </html>
