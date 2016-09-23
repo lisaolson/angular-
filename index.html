@@ -18,30 +18,49 @@
   </head>
 
   <body>
-<div class="page-wrap">
+
     <!-- <div ng-include="../templates/header.html"></div> -->
     <!-- <div ng-view></div> -->
 
-    <header>
-      <div class="container">
-        <!-- <div class="row">
-        <div class="col-md-3">
-          <ul class="nav">
-            <li><a href="#About">About</a></li>
-          <li><a href="#Contact">Contact</a></li>
-        </ul>
-      </div> -->
-     <h1>M U S I C</h1>
+    <div class="container">
+      <div class="row">
+      <div class="col-md-3">
+        <ul class="nav">
+          <li><a ng-href="#About">ABOUT</a></li>
+        <li><a ng-href="#Contact">CONTACT</a></li>
+      </ul>
+      <hr>
+    </div>
 
-    </header>
+
+     <h1 id="title">M U S I C</h1>
+     <hr>
+     <hr id="hrRight">
     <div id="input">
     <input id="inputname" type="text" placeholder="Type your name" ng-model="name" />
     <h2>Welcome to the music app {{ name }} !</h2>
+    <hr>
     <div id="line"></div>
     </div>
 
+<div ng-view></div>
 </div>
 </div>
+
+
+    <div class="container" ng-controller="musicController as musicCtrl">
+      <div class="row">
+       <div ng-repeat="track in musicCtrl.tracks" >
+
+         {{track.title}}
+         {{track.genre}}
+         {{track.id}}
+         {{track.description}}
+
+       </div>
+       </div>
+     </div>
+
       <div id="videos">
         <iframe id="vid1" width="30%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/145894563&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         <iframe id="vid2" width="30%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/224687194&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
@@ -60,19 +79,6 @@
       </div> -->
 
 
-    <!-- <div class="container" ng-controller="musicController as musicCtrl">
 
-      <div class="row">
-       <div ng-repeat="track in musicCtrl.tracks" >
-
-         {{track.title}}
-         {{track.genre}}
-         {{track.id}}
-         {{track.description}}
-
-       </div>
-       </div>
-     </div> -->
-   </div>
   </body>
 </html>

@@ -1,4 +1,4 @@
-// 
+//
 // var musicApp = angular.module('musicApp', []);
 //
 // musicApp.config(['$routeProvider',
@@ -6,29 +6,30 @@
 //     $routeProvider.
 //       when('/About', {
 // 	templateUrl: '../partials/about.html',
-// 	controller: 'AboutController'
+// 	controller: 'AboutCtrl',
+//   title: 'A B O U T'
 //       }).
 //       when('/Contact', {
 // 	templateUrl: '../partials/contact.html',
-// 	controller: 'ContactController'
+// 	controller: 'ContactCtrl',
+//   title: 'C O N T A C T'
 //       }).
 //       otherwise({
 // 	redirectTo: '/'
 //       });
 // }]);
-//
+
 //
 // musicApp.controller('AboutController', function($scope) {
-//
+//   console.log(scope.message);
 // 	$scope.message = 'This is the About screen';
 //
 // });
 //
 //
 // musicApp.controller('ContactController', function($scope) {
-//
+//   console.log($scope.message);
 // 	$scope.message = 'This is the Contact screen';
-//
 // });
 
 
@@ -43,20 +44,20 @@
 //
 //   })
 
-// angular.module('musicApp', [])
-//   .controller('musicController', musicController);
-//
-// musicController.$inject = ['$http'];
-//   function musicController($http){
-//     console.log(musicController);
-//     var vm = this;
-//         $http({
-//           method: 'GET',
-//           url: 'https://api.soundcloud.com/tracks/?client_id=9a5b10b365e2b82fef5ece0ce57d6e03'
-//         }).then(function successCallback(response) {
-//           console.log(response.data);
-//           vm.tracks = response.data;
-//         }, function errorCallback(response) {
-//           console.log('Error getting data', response);
-//         });
-//     }
+angular.module('musicApp', [])
+  .controller('musicController', musicController);
+
+musicController.$inject = ['$http'];
+  function musicController($http){
+    console.log(musicController);
+    var vm = this;
+        $http({
+          method: 'GET',
+          url: 'https://api.soundcloud.com/tracks/?client_id=9a5b10b365e2b82fef5ece0ce57d6e03'
+        }).then(function successCallback(response) {
+          console.log(response.data);
+          vm.tracks = response.data;
+        }, function errorCallback(response) {
+          console.log('Error getting data', response);
+        });
+    }
